@@ -33,9 +33,8 @@ If you need Swift 4.0, use version 2.3.2:
 
 Use [CocoaPods](http://www.cocoapods.org).
 
-1. Add `pod 'DropDown'` to your *Podfile*.
+1. Add `pod 'DropDown', :git => 'https://github.com/aksamitsah/DropDown.git', :branch => 'master''` to your *Podfile*.
 2. Install the pod(s) by running `pod install`.
-3. Add `import DropDown` in the .swift files where you want to use it
 
 ### Carthage
 

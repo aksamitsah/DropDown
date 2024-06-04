@@ -232,6 +232,20 @@ public final class DropDown: UIView {
 		didSet { reloadAllComponents() }
 	}
 
+	@objc public dynamic var borderColor = DPDConstant.UI.BorderColor {
+		willSet {
+			tableViewContainer.layer.borderColor = newValue
+		}
+		didSet { reloadAllComponents() }
+	}
+
+    	@objc public dynamic var borderWidth = DPDConstant.UI.BorderWidth {
+	       	 willSet {
+            		tableViewContainer.layer.borderWidth = newValue
+        	}
+       		 didSet { reloadAllComponents() }
+    	}
+
 	/**
 	Alias method for `cornerRadius` variable to avoid ambiguity.
 	*/
@@ -546,6 +560,9 @@ private extension DropDown {
 		tableViewContainer.layer.shadowOffset = shadowOffset
 		tableViewContainer.layer.shadowOpacity = shadowOpacity
 		tableViewContainer.layer.shadowRadius = shadowRadius
+
+		tableViewContainer.layer.borderColor = borderColor
+        	tableViewContainer.layer.borderWidth = borderWidth
 
 		tableView.backgroundColor = tableViewBackgroundColor
 		tableView.separatorColor = separatorColor
